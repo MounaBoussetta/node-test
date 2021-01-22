@@ -1,0 +1,22 @@
+<div class="card border-dark mb-3">
+    <div class="card-header">
+        Authentification
+    </div>
+    <div class="card-body text-dark">
+        {{#each messages}}
+        <div class="alert alert-danger" role="alert">
+           <p>{{this}}</p>
+        </div>
+        {{/each}}
+        <form action="signin" method="post">
+            <div class="mb-3">
+                <label for="Email" class="form-label">Adresse e-mail</label>
+                <input type="email" class="form-control" id="Email" name="email" placeholder="nom@exemple.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Mot de passe</label>
+                <input type="password" autocomplete="off" class="form-control" id="Password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Suivant</button>
+        </form>
+    </div>
